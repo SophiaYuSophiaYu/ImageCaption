@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d21db2-2d2f-49af-bcb4-2196925281ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/im2txt/train_eval.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/im2txt/train_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/train_eval.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,12 +41,19 @@
       <file leaf-file-name="train_eval.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="63" column="70" lean-forward="true" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+            <state relative-caret-position="396">
+              <caret line="47" column="32" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="32" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/im2txt/configuration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-630" />
           </provider>
         </entry>
       </file>
@@ -113,10 +120,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="18" />
-    <option name="width" value="797" />
-    <option name="height" value="713" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -158,6 +164,31 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="train_eval" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="im2txt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/im2txt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/im2txt/train_eval.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train_eval" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -175,10 +206,10 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27755103" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27752978" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17520662" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -265,6 +296,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/im2txt/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630" />
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/jupyter/AIWork/Week8/quiz-w7-2-densenet/train_image_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-455">
@@ -287,8 +323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="63" column="70" lean-forward="true" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+        <state relative-caret-position="396">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="32" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>

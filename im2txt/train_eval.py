@@ -51,9 +51,9 @@ if __name__ == '__main__':
     print('change wording dir to [{0}]'.format(w_d))
     os.chdir(w_d)
 
-    step_per_epoch = 50000 // FLAGS.batch_size
+    step_per_epoch = 50000 // 32
 
-    if FLAGS.checkpoint_path:
+    if FLAGS.pretrained_model_checkpoint_file:
         ckpt = ' --inception_checkpoint_file=' + FLAGS.pretrained_model_checkpoint_file
     else:
         ckpt = ''
