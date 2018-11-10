@@ -63,7 +63,7 @@ class ModelConfig(object):
     # first time.
     self.inception_checkpoint_file = None
 
-    # Dimensions of Inception v3 input images.
+    # Dimensions of Inception v3 input images. v4、DenseNet大小一样。
     self.image_height = 299
     self.image_width = 299
 
@@ -77,14 +77,21 @@ class ModelConfig(object):
     # If < 1.0, the dropout keep probability applied to LSTM variables.
     self.lstm_dropout_keep_prob = 0.7
 
+    # CNN 部分使用模型名称 InceptionV3 InceptionV4 DenseNet ResNet
+    self.CNN_name = "InceptionV3"
+
 
 class TrainingConfig(object):
   """Wrapper class for training hyperparameters."""
 
   def __init__(self):
     """Sets the default training hyperparameters."""
+
+    # 数据集名称 Flickr8k Flickr30k MSCOCO
+    self.dataset_name = 'MSCOCO'
+
     # Number of examples per epoch of training data.
-    self.num_examples_per_epoch = 586363
+    self.num_examples_per_epoch = 117215 # MSCOCO  117215(原586363？)  Flickr8k 6000  Flickr30k 28000
 
     # Optimizer for training the model.
     self.optimizer = "SGD"
@@ -102,3 +109,16 @@ class TrainingConfig(object):
 
     # How many model checkpoints to keep.
     self.max_checkpoints_to_keep = 5
+
+  def update_data_params(self, dataset_name):
+    self.dataset_name = dataset_name
+    if dataset_name == 'MSCOCO':
+      self.num_examples_per_epoch = 117215
+    elif dataset_name == 'Flickr8k':
+      self.num_examples_per_epoch = 6000
+    elif dataset_name == 'Flickr30k':
+      self.num_examples_per_epoch = 28000
+    else:
+      raise ValueError(
+        'dataset_name [%s] was not recognized.(Flickr8k Flickr30k MSCOCO)' % dataset_name)
+

@@ -8,6 +8,12 @@ from __future__ import print_function
 import argparse
 import os
 
+from im2txt import configuration
+
+# Flickr8k_Train_Num =
+# Flickr30k_Train_Num =
+# MSCOCO_Train_Num =
+
 def parse_args(check=True):
     parser = argparse.ArgumentParser()
     # train
@@ -17,6 +23,10 @@ def parse_args(check=True):
     parser.add_argument('--train_CNN', type=bool, default=False)
     parser.add_argument('--number_of_steps', type=int, default=300000)
     parser.add_argument('--log_every_n_steps', type=int, default=1)
+    # 数据集名称 Flickr8k Flickr30k MSCOCO
+    parser.add_argument('--dataset_name', type=str, default='Flickr8k')
+    # CNN模型名称 InceptionV3 InceptionV4 DenseNet ResNet
+    parser.add_argument('--CNN_name', type=str, default='InceptionV3')
 
     # eval
     parser.add_argument('--eval_input_file_pattern', type=str, default='')
@@ -35,8 +45,10 @@ train_cmd = 'python ./train.py ' \
             '--train_dir={train_dir} ' \
             '--train_inception={train_inception} ' \
             '--number_of_steps={number_of_steps} ' \
-            '--log_every_n_steps={log_every_n_steps} '
-eval_cmd = 'python ./evalute.py ' \
+            '--log_every_n_steps={log_every_n_steps} ' \
+            '--CNN_name={CNN_name} ' \
+            '--dataset_name={dataset_name}'
+eval_cmd = 'python ./evaluate.py ' \
            '--input_file_pattern={input_file_pattern} ' \
            '--checkpoint_dir={checkpoint_dir} ' \
            '--eval_dir={eval_dir} ' \
@@ -51,13 +63,21 @@ if __name__ == '__main__':
     print('change wording dir to [{0}]'.format(w_d))
     os.chdir(w_d)
 
-    step_per_epoch = 50000 // 32
+    model_config = configuration.ModelConfig()
+    training_config = configuration.TrainingConfig()
+    training_config.update_data_params(FLAGS.dataset_name)
+
+    step_per_epoch = training_config.num_examples_per_epoch // model_config.batch_size
+    epoch_num = FLAGS.number_of_steps // step_per_epoch
+    print("Number of examples per epoch is", training_config.num_examples_per_epoch)
+    print("Number of step per epoch is", step_per_epoch)
+    print("Epoch number is", epoch_num)
 
     if FLAGS.pretrained_model_checkpoint_file:
         ckpt = ' --inception_checkpoint_file=' + FLAGS.pretrained_model_checkpoint_file
     else:
         ckpt = ''
-    for i in range(30):
+    for i in range(epoch_num):
         steps = int(step_per_epoch * (i + 1))
         # train 1 epoch
         print('################    train    ################')
@@ -65,8 +85,10 @@ if __name__ == '__main__':
                                          'inception_checkpoint_file': FLAGS.pretrained_model_checkpoint_file,
                                          'train_dir': FLAGS.train_dir,
                                          'train_inception': FLAGS.train_CNN,
-                                         'number_of_steps': FLAGS.number_of_steps,
-                                         'log_every_n_steps': FLAGS.log_every_n_steps}) + ckpt)
+                                         'number_of_steps': steps,
+                                         'log_every_n_steps': FLAGS.log_every_n_steps,
+                                         'CNN_name': FLAGS.CNN_name,
+                                         'dataset_name': FLAGS.dataset_name}) + ckpt)
         for l in p:
             print(l.strip())
 

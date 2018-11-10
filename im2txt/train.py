@@ -37,6 +37,12 @@ tf.flags.DEFINE_boolean("train_inception", False,
 tf.flags.DEFINE_integer("number_of_steps", 1000000, "Number of training steps.")
 tf.flags.DEFINE_integer("log_every_n_steps", 1,
                         "Frequency at which loss and global step are logged.")
+# CNN模型名称 InceptionV3 InceptionV4 DenseNet ResNet
+tf.flags.DEFINE_string("CNN_name", "InceptionV3",
+                       "CNN model name.")
+# 数据集名称 Flickr8k Flickr30k MSCOCO
+tf.flags.DEFINE_string("dataset_name", "MSCOCO",
+                       "Data Set name.")
 
 tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -48,7 +54,9 @@ def main(unused_argv):
   model_config = configuration.ModelConfig()
   model_config.input_file_pattern = FLAGS.input_file_pattern
   model_config.inception_checkpoint_file = FLAGS.inception_checkpoint_file
+  model_config.CNN_name = FLAGS.CNN_name
   training_config = configuration.TrainingConfig()
+  training_config.update_data_params(FLAGS.dataset_name)
 
   # Create training directory.
   train_dir = FLAGS.train_dir

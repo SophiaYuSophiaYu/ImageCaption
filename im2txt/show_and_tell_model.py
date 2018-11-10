@@ -187,17 +187,35 @@ class ShowAndTellModel(object):
     Outputs:
       self.image_embeddings
     """
-    inception_output = image_embedding.inception_v3(
+    cnn_output = image_embedding.inception_v3(
         self.images,
         trainable=self.train_inception,
         is_training=self.is_training())
+    if self.config.CNN_name == 'InceptionV4':
+        cnn_output = image_embedding.inception_v4(
+            self.images,
+            trainable=self.train_inception,
+            is_training=self.is_training())
+    elif self.config.CNN_name == 'DenseNet':
+        cnn_output = image_embedding.DenseNet(
+            x=self.images,
+            nb_blocks=None,
+            filters=24,
+            training=self.is_training(),
+            scope='densent').model
+    elif self.config.CNN_name == 'ResNet':
+        print("================== ResNet尚未实现！ ====================")
+    elif self.config.CNN_name != 'InceptionV3':
+        raise ValueError(
+            'CNN_name [%s] was not recognized.(InceptionV3 InceptionV4 DenseNet ResNet)' % self.config.CNN_name)
+
     self.inception_variables = tf.get_collection(
-        tf.GraphKeys.GLOBAL_VARIABLES, scope="InceptionV3")
+        tf.GraphKeys.GLOBAL_VARIABLES, scope=self.config.CNN_name)
 
     # Map inception output into embedding space.
     with tf.variable_scope("image_embedding") as scope:
       image_embeddings = tf.contrib.layers.fully_connected(
-          inputs=inception_output,
+          inputs=cnn_output,
           num_outputs=self.config.embedding_size,
           activation_fn=None,
           weights_initializer=self.initializer,
