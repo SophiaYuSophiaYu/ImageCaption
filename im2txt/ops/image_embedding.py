@@ -24,7 +24,7 @@ import tensorflow as tf
 import numpy as np
 
 from tensorflow.contrib.slim.python.slim.nets.inception_v3 import inception_v3_base
-from nets import inception
+from nets.inception_v4 import inception_v4_base
 
 from tensorflow.contrib.layers import batch_norm, flatten
 from tensorflow.contrib.framework import arg_scope
