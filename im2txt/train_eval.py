@@ -89,7 +89,7 @@ if __name__ == '__main__':
             print(l.strip())
 
         # eval
-        if steps >= FLAGS.min_global_step:
+        if steps < FLAGS.min_global_step:
             print('Global step = ', steps,' < ', FLAGS.min_global_step,', ignore eval this epoch!')
             continue
         print('################    eval    ################')
