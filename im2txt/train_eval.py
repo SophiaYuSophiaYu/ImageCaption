@@ -10,10 +10,6 @@ import os
 
 from im2txt import configuration
 
-# Flickr8k_Train_Num =
-# Flickr30k_Train_Num =
-# MSCOCO_Train_Num =
-
 def parse_args(check=True):
     parser = argparse.ArgumentParser()
     # train
@@ -71,7 +67,7 @@ if __name__ == '__main__':
     epoch_num = FLAGS.number_of_steps // step_per_epoch
     print("Number of examples per epoch is", training_config.num_examples_per_epoch)
     print("Number of step per epoch is", step_per_epoch)
-    print("Epoch number is", epoch_num)
+    print("To run", FLAGS.number_of_steps,"steps,run epoch number is", epoch_num)
 
     if FLAGS.pretrained_model_checkpoint_file:
         ckpt = ' --inception_checkpoint_file=' + FLAGS.pretrained_model_checkpoint_file
@@ -93,6 +89,9 @@ if __name__ == '__main__':
             print(l.strip())
 
         # eval
+        if steps >= FLAGS.min_global_step:
+            print('Global step = ', steps,' < ', FLAGS.min_global_step,', ignore eval this epoch!')
+            continue
         print('################    eval    ################')
         p = os.popen(eval_cmd.format(**{'input_file_pattern': FLAGS.eval_input_file_pattern,
                                         'checkpoint_dir': FLAGS.train_dir,
