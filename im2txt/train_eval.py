@@ -32,6 +32,9 @@ def parse_args(check=True):
     parser.add_argument('--num_eval_examples', type=int, default=10132)
     parser.add_argument('--min_global_step', type=int, default=5000)
 
+    # Batch size,为0表示以cofiguration.py中为准.
+    parser.add_argument('--batch_size', type=int, default=0)
+
     FLAGS, unparsed = parser.parse_known_args()
     return FLAGS, unparsed
 
@@ -43,14 +46,16 @@ train_cmd = 'python ./train.py ' \
             '--number_of_steps={number_of_steps} ' \
             '--log_every_n_steps={log_every_n_steps} ' \
             '--CNN_name={CNN_name} ' \
-            '--dataset_name={dataset_name}'
+            '--dataset_name={dataset_name} ' \
+            '--batch_size={batch_size}'
 eval_cmd = 'python ./evaluate.py ' \
            '--input_file_pattern={input_file_pattern} ' \
            '--checkpoint_dir={checkpoint_dir} ' \
            '--eval_dir={eval_dir} ' \
            '--eval_interval_secs={eval_interval_secs}  ' \
            '--num_eval_examples={num_eval_examples}  ' \
-           '--min_global_step={min_global_step}'
+           '--min_global_step={min_global_step} ' \
+           '--batch_size={batch_size}'
 
 if __name__ == '__main__':
     FLAGS, unparsed = parse_args()
@@ -84,7 +89,8 @@ if __name__ == '__main__':
                                          'number_of_steps': steps,
                                          'log_every_n_steps': FLAGS.log_every_n_steps,
                                          'CNN_name': FLAGS.CNN_name,
-                                         'dataset_name': FLAGS.dataset_name}) + ckpt)
+                                         'dataset_name': FLAGS.dataset_name,
+                                         'batch_size': FLAGS.batch_size}) + ckpt)
         for l in p:
             print(l.strip())
 
@@ -98,7 +104,8 @@ if __name__ == '__main__':
                                         'eval_dir': FLAGS.eval_dir,
                                         'eval_interval_secs': FLAGS. eval_interval_secs,
                                         'num_eval_examples': FLAGS.num_eval_examples,
-                                        'min_global_step': FLAGS.min_global_step}))
+                                        'min_global_step': FLAGS.min_global_step,
+                                        'batch_size': FLAGS.batch_size}))
         for l in p:
             print(l.strip())
 

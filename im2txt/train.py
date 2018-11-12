@@ -44,6 +44,9 @@ tf.flags.DEFINE_string("CNN_name", "InceptionV3",
 tf.flags.DEFINE_string("dataset_name", "MSCOCO",
                        "Data Set name.")
 
+tf.flags.DEFINE_int("batch_size", "0",
+                       "Batch size,为0表示以cofiguration.py中为准.")
+
 tf.logging.set_verbosity(tf.logging.INFO)
 
 
@@ -55,6 +58,10 @@ def main(unused_argv):
   model_config.input_file_pattern = FLAGS.input_file_pattern
   model_config.inception_checkpoint_file = FLAGS.inception_checkpoint_file
   model_config.CNN_name = FLAGS.CNN_name
+  # 若FLAGS.batch_size设置了，则以运行时的设置为准，否则以configuration.py中设置为准
+  if FLAGS.batch_size > 0:
+      model_config.batch_size = FLAGS.batch_size
+
   training_config = configuration.TrainingConfig()
   training_config.update_data_params(FLAGS.dataset_name)
 
