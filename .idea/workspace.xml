@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d21db2-2d2f-49af-bcb4-2196925281ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/im2txt/ops/image_embedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/ops/image_embedding.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/im2txt/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +39,8 @@
       <file leaf-file-name="show_and_tell_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="194" column="47" lean-forward="true" selection-start-line="194" selection-start-column="47" selection-end-line="194" selection-end-column="47" />
+            <state relative-caret-position="173">
+              <caret line="358" column="24" lean-forward="true" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
               <folding>
                 <element signature="e#879#917#0" expanded="true" />
               </folding>
@@ -54,8 +51,8 @@
       <file leaf-file-name="image_embedding.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/ops/image_embedding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="1635">
+              <caret line="130" column="36" lean-forward="true" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
               <folding>
                 <element signature="e#718#756#0" expanded="true" />
                 <element signature="e#1499#2301#1" />
@@ -137,8 +134,8 @@
       <find>filename</find>
       <find>inception_variables</find>
       <find>beta</find>
-      <find>images</find>
       <find>max_checkpoints_to_keep</find>
+      <find>images</find>
       <find>InceptionV3</find>
     </findStrings>
   </component>
@@ -224,7 +221,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/im2txt/train_eval.py" />
-      <option name="PARAMETERS" value="--train_input_file_pattern E:\01人工智能学习\0数据\flickr8k-tfrecord\train-?????-of-00004 --pretrained_model_checkpoint_file C:\Users\YuRong\AI实战\ImageCaption看图说话机器人\pretrained_ckpt\inception_v3.ckpt --train_dir E:\01人工智能学习\0数据\output\train --train_CNN false --number_of_steps 2000 --dataset_name Flickr8k --CNN_name InceptionV3 --eval_input_file_pattern E:\01人工智能学习\0数据\flickr8k_tfrecord\val-00000-of-00001 --eval_dir E:\01人工智能学习\0数据\output\eval --eval_interval_secs 0 --num_eval_examples 100 --min_global_step 10" />
+      <option name="PARAMETERS" value="--train_input_file_pattern E:\01人工智能学习\0数据\flickr8k-tfrecord\train-?????-of-00004 --pretrained_model_checkpoint_file C:\Users\YuRong\AI实战\ImageCaption看图说话机器人\pretrained_ckpt\inception_v4.ckpt --train_dir E:\01人工智能学习\0数据\output\train --train_CNN false --number_of_steps 2000 --dataset_name Flickr8k --CNN_name InceptionV4 --eval_input_file_pattern E:\01人工智能学习\0数据\flickr8k_tfrecord\val-00000-of-00001 --eval_dir E:\01人工智能学习\0数据\output\eval --eval_interval_secs 0 --num_eval_examples 100 --min_global_step 10" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -248,19 +245,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2157738" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289256" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27933884" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1785124" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289256" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27933884" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.27933884" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -268,7 +275,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -639,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/ops/image_embedding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="1635">
+          <caret line="130" column="36" lean-forward="true" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
           <folding>
             <element signature="e#718#756#0" expanded="true" />
             <element signature="e#1499#2301#1" />
@@ -652,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="194" column="47" lean-forward="true" selection-start-line="194" selection-start-column="47" selection-end-line="194" selection-end-column="47" />
+        <state relative-caret-position="173">
+          <caret line="358" column="24" lean-forward="true" selection-start-line="358" selection-start-column="24" selection-end-line="358" selection-end-column="24" />
           <folding>
             <element signature="e#879#917#0" expanded="true" />
           </folding>
