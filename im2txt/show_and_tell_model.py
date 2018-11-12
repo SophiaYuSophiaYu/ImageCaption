@@ -362,8 +362,6 @@ class ShowAndTellModel(object):
         tf.logging.info("Restoring Inception variables from checkpoint file %s",
                         self.config.inception_checkpoint_file)
         saver.restore(sess, self.config.inception_checkpoint_file)
-        tf.logging.info("Restoring checkpoint file %s",
-                        self.config.inception_checkpoint_file, "successful!")
 
       self.init_fn = restore_fn
 

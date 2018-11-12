@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d21db2-2d2f-49af-bcb4-2196925281ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/im2txt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/im2txt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nets/inception_v4.py" beforeDir="false" afterPath="$PROJECT_DIR$/nets/inception_v4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
@@ -29,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_and_tell_model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show_and_tell_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="253">
+              <caret line="363" column="66" selection-start-line="363" selection-start-column="66" selection-end-line="363" selection-end-column="66" />
               <folding>
                 <element signature="e#879#917#0" expanded="true" />
               </folding>
@@ -53,7 +50,7 @@
       <file leaf-file-name="image_embedding.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/ops/image_embedding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2034">
+            <state relative-caret-position="75">
               <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
               <folding>
                 <element signature="e#718#756#0" expanded="true" />
@@ -151,8 +148,8 @@
         <option value="$PROJECT_DIR$/im2txt/train.py" />
         <option value="$PROJECT_DIR$/im2txt/train_eval.py" />
         <option value="$PROJECT_DIR$/im2txt/ops/image_embedding.py" />
-        <option value="$PROJECT_DIR$/im2txt/show_and_tell_model.py" />
         <option value="$PROJECT_DIR$/nets/inception_v4.py" />
+        <option value="$PROJECT_DIR$/im2txt/show_and_tell_model.py" />
       </list>
     </option>
   </component>
@@ -273,13 +270,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2157738" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289256" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289256" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30247933" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28760332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -624,27 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/im2txt/ops/image_embedding.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2034">
-          <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
-          <folding>
-            <element signature="e#718#756#0" expanded="true" />
-            <element signature="e#1499#2301#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding>
-            <element signature="e#879#917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nets/inception_v4.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -659,6 +636,27 @@
           <folding>
             <element signature="e#3067#3803#0" />
             <element signature="e#3199#3803#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/im2txt/ops/image_embedding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
+          <folding>
+            <element signature="e#718#756#0" expanded="true" />
+            <element signature="e#1499#2301#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="363" column="66" selection-start-line="363" selection-start-column="66" selection-end-line="363" selection-end-column="66" />
+          <folding>
+            <element signature="e#879#917#0" expanded="true" />
           </folding>
         </state>
       </provider>
