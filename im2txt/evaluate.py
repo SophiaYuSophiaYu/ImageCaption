@@ -50,7 +50,7 @@ tf.flags.DEFINE_integer("num_eval_examples", 10132,
 tf.flags.DEFINE_integer("min_global_step", 5000,
                         "Minimum global step to run evaluation.")
 
-tf.flags.DEFINE_int("batch_size", "0",
+tf.flags.DEFINE_integer("batch_size", "0",
                        "Batch size,为0表示以cofiguration.py中为准.")
 
 tf.logging.set_verbosity(tf.logging.INFO)

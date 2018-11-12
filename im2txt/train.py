@@ -44,7 +44,7 @@ tf.flags.DEFINE_string("CNN_name", "InceptionV3",
 tf.flags.DEFINE_string("dataset_name", "MSCOCO",
                        "Data Set name.")
 
-tf.flags.DEFINE_int("batch_size", "0",
+tf.flags.DEFINE_integer("batch_size", "0",
                        "Batch size,为0表示以cofiguration.py中为准.")
 
 tf.logging.set_verbosity(tf.logging.INFO)
