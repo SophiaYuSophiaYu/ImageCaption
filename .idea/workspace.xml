@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d21db2-2d2f-49af-bcb4-2196925281ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nets/inception_v4.py" beforeDir="false" afterPath="$PROJECT_DIR$/nets/inception_v4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +16,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="78">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#3067#3803#0" />
                 <element signature="e#3199#3803#0" />
@@ -26,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show_and_tell_model.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_and_tell_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="-69">
               <caret line="363" column="66" selection-start-line="363" selection-start-column="66" selection-end-line="363" selection-end-column="66" />
               <folding>
                 <element signature="e#879#917#0" expanded="true" />
@@ -38,11 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inception_v4.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/h5py/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inception_v4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nets/inception_v4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="199">
+              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+              <folding>
+                <element signature="e#954#992#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +160,8 @@
         <option value="$PROJECT_DIR$/im2txt/train.py" />
         <option value="$PROJECT_DIR$/im2txt/train_eval.py" />
         <option value="$PROJECT_DIR$/im2txt/ops/image_embedding.py" />
-        <option value="$PROJECT_DIR$/nets/inception_v4.py" />
         <option value="$PROJECT_DIR$/im2txt/show_and_tell_model.py" />
+        <option value="$PROJECT_DIR$/nets/inception_v4.py" />
       </list>
     </option>
   </component>
@@ -199,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.train_eval">
     <configuration name="train" type="PythonConfigurationType" factoryName="Python">
       <module name="im2txt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -231,7 +243,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/im2txt/train_eval.py" />
-      <option name="PARAMETERS" value="--train_input_file_pattern E:\01人工智能学习\0数据\flickr8k-tfrecord\train-?????-of-00004 --pretrained_model_checkpoint_file C:\Users\YuRong\AI实战\ImageCaption看图说话机器人\pretrained_ckpt\inception_v4.ckpt --train_dir E:\01人工智能学习\0数据\output\train --train_CNN false --number_of_steps 2000 --dataset_name Flickr8k --CNN_name InceptionV4 --eval_input_file_pattern E:\01人工智能学习\0数据\flickr8k_tfrecord\val-00000-of-00001 --eval_dir E:\01人工智能学习\0数据\output\eval --eval_interval_secs 0 --num_eval_examples 100 --min_global_step 10" />
+      <option name="PARAMETERS" value="--train_input_file_pattern E:\01人工智能学习\0数据\flickr8k-tfrecord\train-?????-of-00004 --pretrained_model_checkpoint_file C:\Users\YuRong\AI实战\ImageCaption看图说话机器人\pretrained_ckpt\inception_v3.ckpt --train_dir E:\01人工智能学习\0数据\output\train --train_CNN false --number_of_steps 2000 --dataset_name Flickr8k --CNN_name InceptionV3 --eval_input_file_pattern E:\01人工智能学习\0数据\flickr8k_tfrecord\val-00000-of-00001 --eval_dir E:\01人工智能学习\0数据\output\eval --eval_interval_secs 0 --num_eval_examples 100 --min_global_step 10" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -277,7 +289,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289256" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28760332" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5289256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -307,13 +319,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="209" column="112" selection-start-line="208" selection-start-column="8" selection-end-line="209" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/jupyter/AIWork/Week8/quiz-w7-2-densenet/download_and_convert_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
@@ -622,24 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nets/inception_v4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/im2txt/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#3067#3803#0" />
-            <element signature="e#3199#3803#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/ops/image_embedding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -653,10 +640,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="-69">
           <caret line="363" column="66" selection-start-line="363" selection-start-column="66" selection-end-line="363" selection-end-column="66" />
           <folding>
             <element signature="e#879#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/h5py/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/im2txt/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#3067#3803#0" />
+            <element signature="e#3199#3803#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nets/inception_v4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding>
+            <element signature="e#954#992#0" expanded="true" />
           </folding>
         </state>
       </provider>
