@@ -81,7 +81,7 @@ def main(unused_argv):
       if training_config.learning_rate_decay_factor > 0:
         num_batches_per_epoch = (training_config.num_examples_per_epoch /
                                  model_config.batch_size)
-        decay_steps = int(num_batches_per_epoch *
+        decay_steps = int(num_batches_per_epoch * 5 *
                           training_config.num_epochs_per_decay)
 
         def _learning_rate_decay_fn(learning_rate, global_step):

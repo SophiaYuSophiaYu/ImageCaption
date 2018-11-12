@@ -30,7 +30,6 @@ from im2txt.ops import image_embedding
 from im2txt.ops import image_processing
 from im2txt.ops import inputs as input_ops
 
-
 class ShowAndTellModel(object):
   """Image-to-text implementation based on http://arxiv.org/abs/1411.4555.
 
@@ -187,11 +186,13 @@ class ShowAndTellModel(object):
     Outputs:
       self.image_embeddings
     """
-    cnn_output = image_embedding.inception_v3(
-        self.images,
-        trainable=self.train_inception,
-        is_training=self.is_training())
-    if self.config.CNN_name == 'InceptionV4':
+
+    if self.config.CNN_name == 'InceptionV3':
+        cnn_output = image_embedding.inception_v3(
+            self.images,
+            trainable=self.train_inception,
+            is_training=self.is_training())
+    elif self.config.CNN_name == 'InceptionV4':
         cnn_output = image_embedding.inception_v4(
             self.images,
             trainable=self.train_inception,
@@ -204,7 +205,7 @@ class ShowAndTellModel(object):
             training=self.is_training(),
             scope='densent').model
     elif self.config.CNN_name == 'ResNet':
-        print("================== ResNet尚未实现！ ====================")
+        raise ValueError("================== ResNet尚未实现！ ====================" % self.config.CNN_name)
     elif self.config.CNN_name != 'InceptionV3':
         raise ValueError(
             'CNN_name [%s] was not recognized.(InceptionV3 InceptionV4 DenseNet ResNet)' % self.config.CNN_name)
@@ -349,10 +350,19 @@ class ShowAndTellModel(object):
       # Restore inception variables only.
       saver = tf.train.Saver(self.inception_variables)
 
+      tensor_name_list = [tensor.name for tensor in tf.get_default_graph().as_graph_def().node]
+      tf.logging.info(tensor_name_list)
+      # for tensor_name in tensor_name_list:
+      #     tf.logging.info(tensor_name, '\n')
+
+        # ============================== 测试代码 ================================
       def restore_fn(sess):
         tf.logging.info("Restoring Inception variables from checkpoint file %s",
                         self.config.inception_checkpoint_file)
         saver.restore(sess, self.config.inception_checkpoint_file)
+        tf.logging.info("Restoring checkpoint file %s",
+                        self.config.inception_checkpoint_file, "successful!")
+        # ============================== 测试代码 ================================
 
       self.init_fn = restore_fn
 
