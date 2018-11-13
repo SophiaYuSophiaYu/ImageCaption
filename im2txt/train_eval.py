@@ -56,7 +56,6 @@ eval_cmd = 'python ./evaluate.py ' \
            '--num_eval_examples={num_eval_examples}  ' \
            '--min_global_step={min_global_step} ' \
            '--CNN_name={CNN_name} ' \
-           '--dataset_name={dataset_name}' \
            '--batch_size={batch_size}'
 
 if __name__ == '__main__':
