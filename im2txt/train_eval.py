@@ -55,6 +55,8 @@ eval_cmd = 'python ./evaluate.py ' \
            '--eval_interval_secs={eval_interval_secs}  ' \
            '--num_eval_examples={num_eval_examples}  ' \
            '--min_global_step={min_global_step} ' \
+           '--CNN_name={CNN_name} ' \
+           '--dataset_name={dataset_name}' \
            '--batch_size={batch_size}'
 
 if __name__ == '__main__':
@@ -105,6 +107,8 @@ if __name__ == '__main__':
                                         'eval_interval_secs': FLAGS. eval_interval_secs,
                                         'num_eval_examples': FLAGS.num_eval_examples,
                                         'min_global_step': FLAGS.min_global_step,
+                                        'CNN_name': FLAGS.CNN_name,
+                                        'dataset_name': FLAGS.dataset_name,
                                         'batch_size': FLAGS.batch_size}))
         for l in p:
             print(l.strip())

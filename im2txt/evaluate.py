@@ -53,6 +53,14 @@ tf.flags.DEFINE_integer("min_global_step", 5000,
 tf.flags.DEFINE_integer("batch_size", "0",
                        "Batch size,为0表示以cofiguration.py中为准.")
 
+# CNN模型名称 InceptionV3 InceptionV4 DenseNet ResNet
+tf.flags.DEFINE_string("CNN_name", "InceptionV3",
+                       "CNN model name.")
+
+# 数据集名称 Flickr8k Flickr30k MSCOCO
+tf.flags.DEFINE_string("dataset_name", "MSCOCO",
+                       "Data Set name.")
+
 tf.logging.set_verbosity(tf.logging.INFO)
 
 
@@ -167,11 +175,15 @@ def run():
     # Build the model for evaluation.
     model_config = configuration.ModelConfig()
     model_config.input_file_pattern = FLAGS.input_file_pattern
+    model_config.CNN_name = FLAGS.CNN_name
     # 若FLAGS.batch_size设置了，则以运行时的设置为准，否则以configuration.py中设置为准
     if FLAGS.batch_size > 0:
         model_config.batch_size = FLAGS.batch_size
     model = show_and_tell_model.ShowAndTellModel(model_config, mode="eval")
     model.build()
+
+    training_config = configuration.TrainingConfig()
+    training_config.update_data_params(FLAGS.dataset_name)
 
     # Create the Saver to restore model Variables.
     saver = tf.train.Saver()
