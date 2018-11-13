@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d21db2-2d2f-49af-bcb4-2196925281ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/im2txt/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/evaluate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/im2txt/train_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/train_eval.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/evaluate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+            <state relative-caret-position="18">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="e#814#852#0" expanded="true" />
               </folding>
@@ -66,11 +63,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="train_eval.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="train_eval.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="93" column="75" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="75" />
+            <state relative-caret-position="285">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -281,7 +278,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2157738" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289256" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38512397" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25785124" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289256" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -633,22 +630,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
+    <entry file="file://$PROJECT_DIR$/im2txt/evaluate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="93" column="75" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="75" />
+        <state relative-caret-position="18">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
-            <element signature="e#37#75#0" expanded="true" />
+            <element signature="e#814#852#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/im2txt/evaluate.py">
+    <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+        <state relative-caret-position="285">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
           <folding>
-            <element signature="e#814#852#0" expanded="true" />
+            <element signature="e#37#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
