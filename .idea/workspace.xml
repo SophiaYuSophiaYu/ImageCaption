@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d21db2-2d2f-49af-bcb4-2196925281ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/im2txt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/im2txt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/im2txt/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/evaluate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/show_and_tell_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/im2txt/train_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/im2txt/train_eval.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="42" selection-start-line="42" selection-end-line="44" selection-end-column="40" />
+            <state relative-caret-position="389">
+              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
               <folding>
                 <element signature="e#713#751#0" expanded="true" />
               </folding>
@@ -32,10 +31,22 @@
       <file leaf-file-name="evaluate.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/im2txt/evaluate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="334">
+              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
               <folding>
                 <element signature="e#814#852#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_and_tell_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="52" column="31" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="31" />
+              <folding>
+                <element signature="e#879#917#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +69,8 @@
       <file leaf-file-name="train_eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="109" column="67" lean-forward="true" selection-start-line="109" selection-start-column="67" selection-end-line="109" selection-end-column="67" />
+            <state relative-caret-position="175">
+              <caret line="93" column="75" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="75" />
               <folding>
                 <element signature="e#37#75#0" expanded="true" />
               </folding>
@@ -78,7 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkpoint_path</find>
       <find>show</find>
       <find>inception</find>
       <find>number_of_steps</find>
@@ -105,8 +115,10 @@
       <find>batch_size</find>
       <find>tf.flags.DEFINE_int(&quot;batch_size&quot;, &quot;0&quot;,</find>
       <find>model_config</find>
-      <find>dataset_name</find>
+      <find>name</find>
+      <find>data</find>
       <find>3</find>
+      <find>dataset_name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,9 +130,9 @@
         <option value="$USER_HOME$/jupyter/AIWork/Week8/quiz-w7-2-densenet/train_eval_image_classifier.py" />
         <option value="$PROJECT_DIR$/im2txt/configuration.py" />
         <option value="$PROJECT_DIR$/im2txt/ops/image_embedding.py" />
-        <option value="$PROJECT_DIR$/im2txt/show_and_tell_model.py" />
         <option value="$PROJECT_DIR$/nets/inception_v4.py" />
         <option value="$PROJECT_DIR$/im2txt/train.py" />
+        <option value="$PROJECT_DIR$/im2txt/show_and_tell_model.py" />
         <option value="$PROJECT_DIR$/im2txt/evaluate.py" />
         <option value="$PROJECT_DIR$/im2txt/train_eval.py" />
       </list>
@@ -173,7 +185,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train_eval">
+  <component name="RunManager" selected="Python.evaluate">
+    <configuration name="evaluate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="im2txt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/im2txt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/im2txt/evaluate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python">
       <module name="im2txt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,9 +243,11 @@
     <list>
       <item itemvalue="Python.train" />
       <item itemvalue="Python.train_eval" />
+      <item itemvalue="Python.evaluate" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.evaluate" />
         <item itemvalue="Python.train_eval" />
       </list>
     </recent_temporary>
@@ -560,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="363" column="66" selection-start-line="363" selection-start-column="66" selection-end-line="363" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/h5py/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -588,10 +613,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/im2txt/show_and_tell_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="31" />
+          <folding>
+            <element signature="e#879#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="42" selection-start-line="42" selection-end-line="44" selection-end-column="40" />
+        <state relative-caret-position="389">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
           <folding>
             <element signature="e#713#751#0" expanded="true" />
           </folding>
@@ -600,8 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/train_eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="109" column="67" lean-forward="true" selection-start-line="109" selection-start-column="67" selection-end-line="109" selection-end-column="67" />
+        <state relative-caret-position="175">
+          <caret line="93" column="75" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="75" />
           <folding>
             <element signature="e#37#75#0" expanded="true" />
           </folding>
@@ -610,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/im2txt/evaluate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="334">
+          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
           <folding>
             <element signature="e#814#852#0" expanded="true" />
           </folding>

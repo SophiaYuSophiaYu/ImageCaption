@@ -350,14 +350,6 @@ class ShowAndTellModel(object):
       # Restore inception variables only.
       saver = tf.train.Saver(self.inception_variables)
 
-      # ============================== 测试代码 ================================
-      # 输出当前图名
-      # tensor_name_list = [tensor.name for tensor in tf.get_default_graph().as_graph_def().node]
-      # tf.logging.info(tensor_name_list)
-      # for tensor_name in tensor_name_list:
-      #     tf.logging.info(tensor_name)
-        # ============================== 测试代码 ================================
-
       def restore_fn(sess):
         tf.logging.info("Restoring Inception variables from checkpoint file %s",
                         self.config.inception_checkpoint_file)

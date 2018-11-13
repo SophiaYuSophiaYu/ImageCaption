@@ -57,10 +57,6 @@ tf.flags.DEFINE_integer("batch_size", "0",
 tf.flags.DEFINE_string("CNN_name", "InceptionV3",
                        "CNN model name.")
 
-# 数据集名称 Flickr8k Flickr30k MSCOCO
-tf.flags.DEFINE_string("dataset_name", "MSCOCO",
-                       "Data Set name.")
-
 tf.logging.set_verbosity(tf.logging.INFO)
 
 
@@ -179,11 +175,9 @@ def run():
     # 若FLAGS.batch_size设置了，则以运行时的设置为准，否则以configuration.py中设置为准
     if FLAGS.batch_size > 0:
         model_config.batch_size = FLAGS.batch_size
+
     model = show_and_tell_model.ShowAndTellModel(model_config, mode="eval")
     model.build()
-
-    training_config = configuration.TrainingConfig()
-    training_config.update_data_params(FLAGS.dataset_name)
 
     # Create the Saver to restore model Variables.
     saver = tf.train.Saver()

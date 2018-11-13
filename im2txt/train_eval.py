@@ -108,7 +108,6 @@ if __name__ == '__main__':
                                         'num_eval_examples': FLAGS.num_eval_examples,
                                         'min_global_step': FLAGS.min_global_step,
                                         'CNN_name': FLAGS.CNN_name,
-                                        'dataset_name': FLAGS.dataset_name,
                                         'batch_size': FLAGS.batch_size}))
         for l in p:
             print(l.strip())
