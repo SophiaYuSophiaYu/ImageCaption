@@ -203,7 +203,7 @@ class ShowAndTellModel(object):
             nb_blocks=None,
             filters=24,
             training=self.is_training(),
-            scope='densent').model
+            scope='DenseNet').model
     elif self.config.CNN_name == 'ResNet':
         raise ValueError("================== ResNet尚未实现！ ====================" % self.config.CNN_name)
     else:
@@ -346,7 +346,7 @@ class ShowAndTellModel(object):
 
   def setup_inception_initializer(self):
     """Sets up the function to restore inception variables from checkpoint."""
-    if self.mode != "inference":
+    if self.mode != "inference" and self.config.CNN_name != "DenseNet":
       # Restore inception variables only.
       saver = tf.train.Saver(self.inception_variables)
 
