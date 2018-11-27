@@ -16,7 +16,7 @@ def parse_args(check=True):
     parser.add_argument('--train_input_file_pattern', type=str, default='')
     parser.add_argument('--pretrained_model_checkpoint_file', type=str)
     parser.add_argument('--train_dir', type=str, default='')
-    parser.add_argument('--train_CNN', type=bool, default=False)
+    parser.add_argument('--train_CNN', type=bool, default=True)
     parser.add_argument('--number_of_steps', type=int, default=300000)
     parser.add_argument('--log_every_n_steps', type=int, default=1)
     # 数据集名称 Flickr8k Flickr30k MSCOCO
