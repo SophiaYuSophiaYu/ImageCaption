@@ -81,6 +81,7 @@ if __name__ == '__main__':
         ckpt = ''
     for i in range(epoch_num):
         steps = int(step_per_epoch * (i + 1))
+        print('epoch{[', i, ']} goal steps :', steps)
         # train 1 epoch
         print('################    train    ################')
         p = os.popen(train_cmd.format(**{'input_file_pattern': FLAGS.train_input_file_pattern,
